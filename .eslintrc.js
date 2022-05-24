@@ -24,5 +24,7 @@ module.exports = {
     sourceType: 'module',
   },
   plugins: ['react', '@typescript-eslint', 'jest'],
-  rules: {},
+  rules: {
+    'no-use-before-define': 'off',
+  },
 }
