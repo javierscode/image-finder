@@ -19,8 +19,10 @@ export async function getRandomPhoto() {
 
 export async function getListOfPhotos(page = 1) {
   const response = await fetch(
-    `${BASE_URL}/photos/?page=${page}&client_id=${ACCESS_KEY}`
+    `${BASE_URL}/photos/?page=${page}&per_page=9&client_id=${ACCESS_KEY}`
   )
+  console.log(response)
+
   const data = (await response.json()) as Array<PhotoResponse>
 
   const listOfPhotos = data.map(photoMapper)
