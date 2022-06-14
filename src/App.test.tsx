@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react'
 import user from '@testing-library/user-event'
 import App from './App'
 
-test('Renders main page correctly', async () => {
+test.skip('Renders main page correctly', async () => {
   // Given
   render(<App />)
   const buttonCount = await screen.findByRole('button')
